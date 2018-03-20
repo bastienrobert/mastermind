@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B3E970F2061505000F2712F /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B3E970E2061505000F2712F /* GameKit.framework */; };
 		0B51C0E120611B9B00B8DDCB /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B51C0E020611B9B00B8DDCB /* HomeController.swift */; };
 		0B51C0E320612C0E00B8DDCB /* CreditsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B51C0E220612C0E00B8DDCB /* CreditsController.swift */; };
 		0B51C0E520612C7500B8DDCB /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B51C0E420612C7500B8DDCB /* GameController.swift */; };
+		0B51C0E72061376500B8DDCB /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B51C0E62061376500B8DDCB /* Game.swift */; };
 		0BCF6A7C20600990009CCC60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCF6A7B20600990009CCC60 /* AppDelegate.swift */; };
 		0BCF6A7E20600990009CCC60 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCF6A7D20600990009CCC60 /* ViewController.swift */; };
 		0BCF6A8120600990009CCC60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BCF6A7F20600990009CCC60 /* Main.storyboard */; };
@@ -19,9 +21,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B3E970E2061505000F2712F /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		0B51C0E020611B9B00B8DDCB /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		0B51C0E220612C0E00B8DDCB /* CreditsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsController.swift; sourceTree = "<group>"; };
 		0B51C0E420612C7500B8DDCB /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
+		0B51C0E62061376500B8DDCB /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		0BA25DF4206146C60039664D /* mastermind.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = mastermind.entitlements; sourceTree = "<group>"; };
 		0BCF6A7820600990009CCC60 /* mastermind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mastermind.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BCF6A7B20600990009CCC60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0BCF6A7D20600990009CCC60 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -40,6 +45,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1630B67A8AD19CEE9DF1671F /* Pods_mastermind.framework in Frameworks */,
+				0B3E970F2061505000F2712F /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,10 +73,12 @@
 		0BCF6A7A20600990009CCC60 /* mastermind */ = {
 			isa = PBXGroup;
 			children = (
+				0BA25DF4206146C60039664D /* mastermind.entitlements */,
 				0BCF6A7B20600990009CCC60 /* AppDelegate.swift */,
 				0BCF6A7D20600990009CCC60 /* ViewController.swift */,
 				0B51C0E020611B9B00B8DDCB /* HomeController.swift */,
 				0BCF6A7F20600990009CCC60 /* Main.storyboard */,
+				0B51C0E62061376500B8DDCB /* Game.swift */,
 				0B51C0E420612C7500B8DDCB /* GameController.swift */,
 				0B51C0E220612C0E00B8DDCB /* CreditsController.swift */,
 				0BCF6A8220600990009CCC60 /* Assets.xcassets */,
@@ -83,6 +91,7 @@
 		1F33123927B5C53FF04EB9FD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0B3E970E2061505000F2712F /* GameKit.framework */,
 				BD00327FD3DC62F5A2DBA8BE /* Pods_mastermind.framework */,
 			);
 			name = Frameworks;
@@ -133,6 +142,44 @@
 					0BCF6A7720600990009CCC60 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplePay = {
+								enabled = 0;
+							};
+							com.apple.GameCenter = {
+								enabled = 1;
+							};
+							com.apple.HotspotConfiguration = {
+								enabled = 0;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+							com.apple.Multipath = {
+								enabled = 0;
+							};
+							com.apple.NetworkExtensions.iOS = {
+								enabled = 0;
+							};
+							com.apple.Push = {
+								enabled = 0;
+							};
+							com.apple.Siri = {
+								enabled = 0;
+							};
+							com.apple.VPNLite = {
+								enabled = 0;
+							};
+							com.apple.Wallet = {
+								enabled = 0;
+							};
+							com.apple.iCloud = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -224,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B51C0E320612C0E00B8DDCB /* CreditsController.swift in Sources */,
+				0B51C0E72061376500B8DDCB /* Game.swift in Sources */,
 				0B51C0E520612C7500B8DDCB /* GameController.swift in Sources */,
 				0BCF6A7E20600990009CCC60 /* ViewController.swift in Sources */,
 				0BCF6A7C20600990009CCC60 /* AppDelegate.swift in Sources */,
@@ -365,12 +413,15 @@
 			baseConfigurationReference = 6D81309D2EF84008FD4E13AF /* Pods-mastermind.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Y87978A2JM;
+				DEVELOPMENT_TEAM = N968BJ7CTC;
 				INFOPLIST_FILE = mastermind/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = fr.bastienrobert.mastermind;
+				PRODUCT_BUNDLE_IDENTIFIER = fr.bdx.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -381,12 +432,15 @@
 			baseConfigurationReference = E086C7CE7142650D28AF747D /* Pods-mastermind.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Y87978A2JM;
+				DEVELOPMENT_TEAM = N968BJ7CTC;
 				INFOPLIST_FILE = mastermind/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = fr.bastienrobert.mastermind;
+				PRODUCT_BUNDLE_IDENTIFIER = fr.bdx.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
