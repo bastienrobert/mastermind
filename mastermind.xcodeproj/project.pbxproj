@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B51C0E120611B9B00B8DDCB /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B51C0E020611B9B00B8DDCB /* HomeController.swift */; };
 		0BCF6A7C20600990009CCC60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCF6A7B20600990009CCC60 /* AppDelegate.swift */; };
 		0BCF6A7E20600990009CCC60 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCF6A7D20600990009CCC60 /* ViewController.swift */; };
 		0BCF6A8120600990009CCC60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BCF6A7F20600990009CCC60 /* Main.storyboard */; };
 		0BCF6A8320600990009CCC60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BCF6A8220600990009CCC60 /* Assets.xcassets */; };
 		0BCF6A8620600990009CCC60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BCF6A8420600990009CCC60 /* LaunchScreen.storyboard */; };
+		1630B67A8AD19CEE9DF1671F /* Pods_mastermind.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD00327FD3DC62F5A2DBA8BE /* Pods_mastermind.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B51C0E020611B9B00B8DDCB /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		0BCF6A7820600990009CCC60 /* mastermind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mastermind.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BCF6A7B20600990009CCC60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0BCF6A7D20600990009CCC60 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,9 @@
 		0BCF6A8220600990009CCC60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0BCF6A8520600990009CCC60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0BCF6A8720600990009CCC60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D81309D2EF84008FD4E13AF /* Pods-mastermind.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mastermind.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mastermind/Pods-mastermind.debug.xcconfig"; sourceTree = "<group>"; };
+		BD00327FD3DC62F5A2DBA8BE /* Pods_mastermind.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mastermind.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E086C7CE7142650D28AF747D /* Pods-mastermind.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mastermind.release.xcconfig"; path = "Pods/Target Support Files/Pods-mastermind/Pods-mastermind.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1630B67A8AD19CEE9DF1671F /* Pods_mastermind.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +47,8 @@
 			children = (
 				0BCF6A7A20600990009CCC60 /* mastermind */,
 				0BCF6A7920600990009CCC60 /* Products */,
+				F9EA51D1200708D6F8EE9483 /* Pods */,
+				1F33123927B5C53FF04EB9FD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +65,30 @@
 			children = (
 				0BCF6A7B20600990009CCC60 /* AppDelegate.swift */,
 				0BCF6A7D20600990009CCC60 /* ViewController.swift */,
+				0B51C0E020611B9B00B8DDCB /* HomeController.swift */,
 				0BCF6A7F20600990009CCC60 /* Main.storyboard */,
 				0BCF6A8220600990009CCC60 /* Assets.xcassets */,
 				0BCF6A8420600990009CCC60 /* LaunchScreen.storyboard */,
 				0BCF6A8720600990009CCC60 /* Info.plist */,
 			);
 			path = mastermind;
+			sourceTree = "<group>";
+		};
+		1F33123927B5C53FF04EB9FD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BD00327FD3DC62F5A2DBA8BE /* Pods_mastermind.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F9EA51D1200708D6F8EE9483 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6D81309D2EF84008FD4E13AF /* Pods-mastermind.debug.xcconfig */,
+				E086C7CE7142650D28AF747D /* Pods-mastermind.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0BCF6A8A20600990009CCC60 /* Build configuration list for PBXNativeTarget "mastermind" */;
 			buildPhases = (
+				B3BE19B0183E402720FDECDA /* [CP] Check Pods Manifest.lock */,
 				0BCF6A7420600990009CCC60 /* Sources */,
 				0BCF6A7520600990009CCC60 /* Frameworks */,
 				0BCF6A7620600990009CCC60 /* Resources */,
+				F3BE4A34ED586C34FC5528C1 /* [CP] Embed Pods Frameworks */,
+				FF89E48960CD1A3A097A9845 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,6 +161,57 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B3BE19B0183E402720FDECDA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-mastermind-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F3BE4A34ED586C34FC5528C1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mastermind/Pods-mastermind-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF89E48960CD1A3A097A9845 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mastermind/Pods-mastermind-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0BCF6A7420600990009CCC60 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -138,6 +219,7 @@
 			files = (
 				0BCF6A7E20600990009CCC60 /* ViewController.swift in Sources */,
 				0BCF6A7C20600990009CCC60 /* AppDelegate.swift in Sources */,
+				0B51C0E120611B9B00B8DDCB /* HomeController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +354,7 @@
 		};
 		0BCF6A8B20600990009CCC60 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D81309D2EF84008FD4E13AF /* Pods-mastermind.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +370,7 @@
 		};
 		0BCF6A8C20600990009CCC60 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E086C7CE7142650D28AF747D /* Pods-mastermind.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
