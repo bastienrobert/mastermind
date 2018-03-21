@@ -29,7 +29,7 @@ class GameController: ViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(timer), name: Notification.Name(rawValue: "timerUpdated"), object: nil)
         
         for button in fruitButtons {
-            let params = Game.Color(rawValue: button.tag)!.label()
+            let params = Color.Value(rawValue: button.tag)!.label()
             customizeControls(button: button, params: params)
         }
     }

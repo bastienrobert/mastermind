@@ -17,6 +17,7 @@
 		0BCF6A8120600990009CCC60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BCF6A7F20600990009CCC60 /* Main.storyboard */; };
 		0BCF6A8320600990009CCC60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BCF6A8220600990009CCC60 /* Assets.xcassets */; };
 		0BCF6A8620600990009CCC60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BCF6A8420600990009CCC60 /* LaunchScreen.storyboard */; };
+		0BD5B6D72062BFD100438CF2 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD5B6D62062BFD100438CF2 /* Color.swift */; };
 		1630B67A8AD19CEE9DF1671F /* Pods_mastermind.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD00327FD3DC62F5A2DBA8BE /* Pods_mastermind.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +35,7 @@
 		0BCF6A8220600990009CCC60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0BCF6A8520600990009CCC60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0BCF6A8720600990009CCC60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0BD5B6D62062BFD100438CF2 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		6D81309D2EF84008FD4E13AF /* Pods-mastermind.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mastermind.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mastermind/Pods-mastermind.debug.xcconfig"; sourceTree = "<group>"; };
 		BD00327FD3DC62F5A2DBA8BE /* Pods_mastermind.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mastermind.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E086C7CE7142650D28AF747D /* Pods-mastermind.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mastermind.release.xcconfig"; path = "Pods/Target Support Files/Pods-mastermind/Pods-mastermind.release.xcconfig"; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				0B51C0E020611B9B00B8DDCB /* HomeController.swift */,
 				0BCF6A7F20600990009CCC60 /* Main.storyboard */,
 				0B51C0E62061376500B8DDCB /* Game.swift */,
+				0BD5B6D62062BFD100438CF2 /* Color.swift */,
 				0B51C0E420612C7500B8DDCB /* GameController.swift */,
 				0B51C0E220612C0E00B8DDCB /* CreditsController.swift */,
 				0BCF6A8220600990009CCC60 /* Assets.xcassets */,
@@ -272,6 +275,7 @@
 			files = (
 				0B51C0E320612C0E00B8DDCB /* CreditsController.swift in Sources */,
 				0B51C0E72061376500B8DDCB /* Game.swift in Sources */,
+				0BD5B6D72062BFD100438CF2 /* Color.swift in Sources */,
 				0B51C0E520612C7500B8DDCB /* GameController.swift in Sources */,
 				0BCF6A7E20600990009CCC60 /* ViewController.swift in Sources */,
 				0BCF6A7C20600990009CCC60 /* AppDelegate.swift in Sources */,
