@@ -12,13 +12,13 @@ import UIKit
 class Game {
     
     var timer : Int = 0
-    var solution : Array<Any> = []
+    var solution : Array<Int> = []
     
     init() {
         self.startTimer()
         self.solution = self.createCombination()
         print(self.solution)
-        print(self.resolveCombination())
+        print(self.resolveCombination(entry: self.solution))
     }
     
     func startTimer() {
@@ -47,12 +47,25 @@ class Game {
         return combination
     }
     
-    func resolveCombination() -> Array<String> {
+    func resolveCombination(entry: Array<Int>) -> Array<String> {
         var resolution: Array<String> = []
-        for i in self.solution {
-            resolution.append(Color.Value(rawValue: i as! Int)!.label()["icon"] as! String)
+        for i in entry {
+            resolution.append(Color.Value(rawValue: i)!.label()["icon"] as! String)
         }
         return resolution
+    }
+    
+    func check(entry: Array<Int>) {
+        if (self.solution == entry) {
+            print(entry)
+            print("GAGNÉ")
+        } else {
+            self.engine(entry: entry)
+        }
+    }
+    
+    func engine(entry: Array<Int>) {
+        // Implement the algorithm
     }
     
 }

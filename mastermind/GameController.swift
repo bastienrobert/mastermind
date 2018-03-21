@@ -11,6 +11,8 @@ import UIKit
 class GameController: ViewController {
     
     var myGame = Game()
+    var cache: Array<Int> = []
+    var rows: Int = 0
     
     // Buttons and labels
     @IBOutlet weak var newButton: UIButton!
@@ -20,9 +22,13 @@ class GameController: ViewController {
     // Actions vars
     
     @IBAction func fruitBtnPressed(_ sender: UIButton) {
-        print(sender.tag)
+        self.cache.count <= 4 ? self.cache.append(sender.tag) : nil
+        if (self.cache.count >= 4) {
+            myGame.check(entry: self.cache)
+            self.cache = []
+            self.rows += 1
+        }
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
