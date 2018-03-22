@@ -7,7 +7,7 @@
 //
 import UIKit
 
-class CreditsController: ViewController {
+class CreditController: ViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		0B3E970F2061505000F2712F /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B3E970E2061505000F2712F /* GameKit.framework */; };
 		0B51C0E120611B9B00B8DDCB /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B51C0E020611B9B00B8DDCB /* HomeController.swift */; };
-		0B51C0E320612C0E00B8DDCB /* CreditsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B51C0E220612C0E00B8DDCB /* CreditsController.swift */; };
+		0B51C0E320612C0E00B8DDCB /* CreditController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B51C0E220612C0E00B8DDCB /* CreditController.swift */; };
 		0B51C0E520612C7500B8DDCB /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B51C0E420612C7500B8DDCB /* GameController.swift */; };
 		0B51C0E72061376500B8DDCB /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B51C0E62061376500B8DDCB /* Game.swift */; };
 		0BCF6A7C20600990009CCC60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCF6A7B20600990009CCC60 /* AppDelegate.swift */; };
@@ -18,13 +18,15 @@
 		0BCF6A8320600990009CCC60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BCF6A8220600990009CCC60 /* Assets.xcassets */; };
 		0BCF6A8620600990009CCC60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BCF6A8420600990009CCC60 /* LaunchScreen.storyboard */; };
 		0BD5B6D72062BFD100438CF2 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD5B6D62062BFD100438CF2 /* Color.swift */; };
+		0BD5B6E92063C04D00438CF2 /* ScoreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD5B6E82063C04D00438CF2 /* ScoreController.swift */; };
+		0BD5B6F12063C22700438CF2 /* ScoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD5B6F02063C22700438CF2 /* ScoreTableViewCell.swift */; };
 		1630B67A8AD19CEE9DF1671F /* Pods_mastermind.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD00327FD3DC62F5A2DBA8BE /* Pods_mastermind.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0B3E970E2061505000F2712F /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		0B51C0E020611B9B00B8DDCB /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
-		0B51C0E220612C0E00B8DDCB /* CreditsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsController.swift; sourceTree = "<group>"; };
+		0B51C0E220612C0E00B8DDCB /* CreditController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditController.swift; sourceTree = "<group>"; };
 		0B51C0E420612C7500B8DDCB /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
 		0B51C0E62061376500B8DDCB /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		0BA25DF4206146C60039664D /* mastermind.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = mastermind.entitlements; sourceTree = "<group>"; };
@@ -36,6 +38,8 @@
 		0BCF6A8520600990009CCC60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0BCF6A8720600990009CCC60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0BD5B6D62062BFD100438CF2 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		0BD5B6E82063C04D00438CF2 /* ScoreController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ScoreController.swift; path = mastermind/Controller/ScoreController.swift; sourceTree = SOURCE_ROOT; };
+		0BD5B6F02063C22700438CF2 /* ScoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreTableViewCell.swift; sourceTree = "<group>"; };
 		6D81309D2EF84008FD4E13AF /* Pods-mastermind.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mastermind.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mastermind/Pods-mastermind.debug.xcconfig"; sourceTree = "<group>"; };
 		BD00327FD3DC62F5A2DBA8BE /* Pods_mastermind.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mastermind.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E086C7CE7142650D28AF747D /* Pods-mastermind.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mastermind.release.xcconfig"; path = "Pods/Target Support Files/Pods-mastermind/Pods-mastermind.release.xcconfig"; sourceTree = "<group>"; };
@@ -97,11 +101,13 @@
 		0BD5B6E52063B2EE00438CF2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				0BD5B6F02063C22700438CF2 /* ScoreTableViewCell.swift */,
+				0BD5B6E82063C04D00438CF2 /* ScoreController.swift */,
 				0BCF6A7B20600990009CCC60 /* AppDelegate.swift */,
 				0BCF6A7D20600990009CCC60 /* ViewController.swift */,
 				0B51C0E020611B9B00B8DDCB /* HomeController.swift */,
 				0B51C0E420612C7500B8DDCB /* GameController.swift */,
-				0B51C0E220612C0E00B8DDCB /* CreditsController.swift */,
+				0B51C0E220612C0E00B8DDCB /* CreditController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -305,7 +311,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B51C0E320612C0E00B8DDCB /* CreditsController.swift in Sources */,
+				0BD5B6E92063C04D00438CF2 /* ScoreController.swift in Sources */,
+				0BD5B6F12063C22700438CF2 /* ScoreTableViewCell.swift in Sources */,
+				0B51C0E320612C0E00B8DDCB /* CreditController.swift in Sources */,
 				0B51C0E72061376500B8DDCB /* Game.swift in Sources */,
 				0BD5B6D72062BFD100438CF2 /* Color.swift in Sources */,
 				0B51C0E520612C7500B8DDCB /* GameController.swift in Sources */,
