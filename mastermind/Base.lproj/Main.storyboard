@@ -157,6 +157,9 @@
                                 <rect key="frame" x="329" y="28" width="24" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="new"/>
+                                <connections>
+                                    <action selector="restartGame:" destination="u9b-Oz-eoB" eventType="touchUpInside" id="cf1-sE-QaY"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kQh-hr-r6s">
                                 <rect key="frame" x="8" y="597" width="50" height="50"/>

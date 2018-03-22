@@ -11,13 +11,14 @@ import UIKit
 
 class Game {
     
-    var timer : Int = 0
-    var solution : Array<Int> = []
+    var timer: Int = 0
+    var rows: Int = 0
+    var solution: Array<Int> = []
+    var cache: Array<Int> = []
     
     init() {
         self.startTimer()
         self.solution = self.createCombination()
-        print(self.solution)
         print(self.resolveCombination(entry: self.solution))
     }
     
@@ -57,15 +58,49 @@ class Game {
     
     func check(entry: Array<Int>) {
         if (self.solution == entry) {
-            print(entry)
             print("GAGNÉ")
+        } else if (self.rows >= 10) {
+            self.endGame()
         } else {
-            self.engine(entry: entry)
+            let checker = self.engine(entry: entry)
+            print(checker)
         }
     }
     
-    func engine(entry: Array<Int>) {
-        // Implement the algorithm
+    func engine(entry: Array<Int>) -> [String: Int] {
+        var ok = 0
+        var nok = 0
+        var entry = entry as Array<Int?>
+        var solution = self.solution as Array<Int?>
+        
+        for i in 0..<solution.count where solution[i] == entry[i] {
+            ok += 1
+            solution[i] = nil
+            entry[i] = nil
+        }
+        
+        for i in 0..<solution.count {
+            for j in 0..<entry.count where solution[i] == entry[j] && solution[i] != nil {
+                nok += 1
+                solution[i] = nil
+                entry[j] = nil
+            }
+        }
+        
+        return ["ok": ok, "nok": nok]
+    }
+    
+    func removeFromCache(id: Int) {
+        return self.cache.removeSubrange(id..<self.cache.count)
+    }
+    
+    func endRow() {
+        self.cache = []
+        self.rows += 1
+    }
+    
+    func endGame() {
+        print("PERDU")
     }
     
 }
