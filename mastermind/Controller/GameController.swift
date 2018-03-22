@@ -16,18 +16,23 @@ class GameController: ViewController {
     @IBOutlet weak var newButton: UIButton!
     @IBOutlet weak var labelCounter: UILabel!
     @IBOutlet var fruitButtons: [UIButton]!
+    @IBOutlet weak var validateButton: UIButton!
     
     // Actions vars
     
     @IBAction func fruitBtnPressed(_ sender: UIButton) {
         myGame.cache.count <= 4 ? myGame.cache.append(sender.tag) : nil
         if (myGame.cache.count >= 4) {
-            myGame.check(entry: myGame.cache)
-            myGame.endRow()
+            validateButton.isHidden = false
         }
     }
     @IBAction func restartGame(_ sender: Any) {
         self.myGame = Game()
+    }
+    @IBAction func validateCombination(_ sender: Any) {
+        myGame.check(entry: myGame.cache)
+        myGame.endRow()
+        validateButton.isHidden = true
     }
     
     override func viewDidLoad() {
@@ -38,6 +43,8 @@ class GameController: ViewController {
             let params = Color.Value(rawValue: button.tag)!.label()
             customizeControls(button: button, params: params)
         }
+        customizeButton(button: validateButton)
+        validateButton.isHidden = true
     }
     
     @objc func timer() {

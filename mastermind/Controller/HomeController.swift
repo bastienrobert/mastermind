@@ -25,15 +25,7 @@ class HomeController: ViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    func customizeButton(button: UIButton) {
-        button.backgroundColor = .clear
-        button.layer.cornerRadius = 25
-        button.layer.borderWidth = 2
-        button.layer.borderColor = UIColor.black.cgColor
-    }
-    
+    }    
     
 }
 

@@ -19,6 +19,13 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func customizeButton(button: UIButton) {
+        button.backgroundColor = UIColor.white
+        button.layer.cornerRadius = 25
+        button.layer.borderWidth = 2
+        button.layer.borderColor = UIColor.black.cgColor
+    }
 
 
 }

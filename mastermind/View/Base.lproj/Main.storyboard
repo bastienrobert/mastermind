@@ -209,6 +209,18 @@
                                     <action selector="fruitBtnPressed:" destination="u9b-Oz-eoB" eventType="touchUpInside" id="yBh-YW-88i"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l56-7P-a5c">
+                                <rect key="frame" x="8" y="597" width="359" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.98011249300000003" green="0.8181348473554052" blue="0.95912018233162299" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="17"/>
+                                <state key="normal" title="VALIDATE">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="validateCombination:" destination="u9b-Oz-eoB" eventType="touchUpInside" id="MFC-Vs-QUB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Z0S-oK-X43"/>
@@ -216,6 +228,7 @@
                     <connections>
                         <outlet property="labelCounter" destination="Emg-59-F42" id="wtK-VG-b8s"/>
                         <outlet property="newButton" destination="yuV-DQ-wrA" id="jpQ-aE-Ku9"/>
+                        <outlet property="validateButton" destination="l56-7P-a5c" id="bCi-Tv-Rqb"/>
                         <outletCollection property="fruitButtons" destination="kQh-hr-r6s" collectionClass="NSMutableArray" id="c85-fQ-cqL"/>
                         <outletCollection property="fruitButtons" destination="QBU-8U-jLb" collectionClass="NSMutableArray" id="r8x-S9-0ET"/>
                         <outletCollection property="fruitButtons" destination="etL-rn-rtn" collectionClass="NSMutableArray" id="Hx6-2b-nFA"/>
