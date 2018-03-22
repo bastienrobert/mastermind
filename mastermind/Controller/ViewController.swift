@@ -26,6 +26,37 @@ class ViewController: UIViewController {
         button.layer.borderWidth = 2
         button.layer.borderColor = UIColor.black.cgColor
     }
+    
+    func customizeFruit(button: UIButton, id: Int?) {
+        if (id != nil) {
+            let params = Color.Value(rawValue: id!)!.label()
+            button.setTitle(params["icon"] as? String, for: .normal)
+            button.backgroundColor = params["backgroundColor"] as? UIColor
+            button.layer.borderColor = (params["borderColor"] as! CGColor)
+        } else {
+            button.backgroundColor = UIColor(red:0.98, green:0.98, blue:0.98, alpha:1.0)
+            button.layer.borderColor = UIColor(red:0.97, green:0.97, blue:0.97, alpha:1.0).cgColor
+        }
+        button.layer.cornerRadius = 25
+        button.layer.masksToBounds = true
+        button.layer.borderWidth = 2
+    }
+    
+    func customizeSolution(label: UILabel, status: Bool?) {
+        if (status == true) {
+            label.backgroundColor = UIColor(red:0.95, green:0.98, blue:0.91, alpha:1.0)
+            label.layer.borderColor = UIColor(red:0.90, green:0.97, blue:0.83, alpha:1.0).cgColor
+        } else if (status == false) {
+            label.backgroundColor = UIColor(red:0.96, green:0.80, blue:0.82, alpha:1.0)
+            label.layer.borderColor = UIColor(red:0.93, green:0.64, blue:0.67, alpha:1.0).cgColor
+        } else {
+            label.backgroundColor = UIColor(red:0.98, green:0.98, blue:0.98, alpha:1.0)
+            label.layer.borderColor = UIColor(red:0.97, green:0.97, blue:0.97, alpha:1.0).cgColor
+        }
+        label.layer.cornerRadius = 10
+        label.layer.masksToBounds = true
+        label.layer.borderWidth = 2
+    }
 
 
 }

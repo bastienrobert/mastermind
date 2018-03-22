@@ -18,6 +18,9 @@ class GameController: ViewController {
     @IBOutlet var fruitButtons: [UIButton]!
     @IBOutlet weak var validateButton: UIButton!
     
+    @IBOutlet var combinationButtons: [UIButton]!
+    @IBOutlet var solutionLabels: [UILabel]!
+    
     // Actions vars
     
     @IBAction func fruitBtnPressed(_ sender: UIButton) {
@@ -42,6 +45,12 @@ class GameController: ViewController {
         for button in fruitButtons {
             let params = Color.Value(rawValue: button.tag)!.label()
             customizeControls(button: button, params: params)
+        }
+        for button in combinationButtons {
+            customizeFruit(button: button, id: nil)
+        }
+        for label in solutionLabels {
+            customizeSolution(label: label, status: nil)
         }
         customizeButton(button: validateButton)
         validateButton.isHidden = true
