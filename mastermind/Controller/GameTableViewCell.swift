@@ -1,5 +1,5 @@
 //
-//  ScoreTableViewCell.swift
+//  GameTableViewCell.swift
 //  mastermind
 //
 //  Created by Bastien Robert on 22/03/2018.
@@ -8,14 +8,8 @@
 
 import UIKit
 
-class ScoreTableViewCell: UITableViewCell {
+class GameTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var scoreId: UILabel!
-    @IBOutlet weak var scoreName: UILabel!
-    @IBOutlet weak var scoreRounds: UILabel!
-    @IBOutlet weak var scoreTime: UILabel!
-    
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

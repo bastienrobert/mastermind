@@ -8,18 +8,16 @@
 
 import UIKit
 
-class GameController: ViewController {
+class GameController: ViewController, UITableViewDataSource, UITableViewDelegate {
     
     var myGame = Game()
+    @IBOutlet weak var gameTable: UITableView!
     
     // Buttons and labels
     @IBOutlet weak var newButton: UIButton!
     @IBOutlet weak var labelCounter: UILabel!
     @IBOutlet var fruitButtons: [UIButton]!
     @IBOutlet weak var validateButton: UIButton!
-    
-    @IBOutlet var combinationButtons: [UIButton]!
-    @IBOutlet var solutionLabels: [UILabel]!
     
     // Actions vars
     
@@ -46,14 +44,12 @@ class GameController: ViewController {
             let params = Color.Value(rawValue: button.tag)!.label()
             customizeControls(button: button, params: params)
         }
-        for button in combinationButtons {
-            customizeFruit(button: button, id: nil)
-        }
-        for label in solutionLabels {
-            customizeSolution(label: label, status: nil)
-        }
         customizeButton(button: validateButton)
         validateButton.isHidden = true
+        
+        gameTable.delegate = self
+        gameTable.dataSource = self
+        self.gameTable.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
     
     @objc func timer() {
@@ -72,6 +68,32 @@ class GameController: ViewController {
         button.layer.cornerRadius = 25
         button.layer.masksToBounds = true
         button.layer.borderWidth = 2
+    }
+    
+    //GAME TABLE VIEW
+    
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 9
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 58
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        guard let cell = gameTable.dequeueReusableCell(withIdentifier: "gameCell", for: indexPath) as? GameTableViewCell else {
+            fatalError("can't cast cell")
+        }
+        
+        //cell.scoreId.text = scoreArray[indexPath.row]["id"]
+        
+        return cell
     }
     
 }
