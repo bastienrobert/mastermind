@@ -76,19 +76,51 @@
 			isa = PBXGroup;
 			children = (
 				0BA25DF4206146C60039664D /* mastermind.entitlements */,
-				0BCF6A7B20600990009CCC60 /* AppDelegate.swift */,
-				0BCF6A7D20600990009CCC60 /* ViewController.swift */,
-				0B51C0E020611B9B00B8DDCB /* HomeController.swift */,
-				0BCF6A7F20600990009CCC60 /* Main.storyboard */,
-				0B51C0E62061376500B8DDCB /* Game.swift */,
-				0BD5B6D62062BFD100438CF2 /* Color.swift */,
-				0B51C0E420612C7500B8DDCB /* GameController.swift */,
-				0B51C0E220612C0E00B8DDCB /* CreditsController.swift */,
-				0BCF6A8220600990009CCC60 /* Assets.xcassets */,
-				0BCF6A8420600990009CCC60 /* LaunchScreen.storyboard */,
+				0BD5B6E52063B2EE00438CF2 /* Controller */,
+				0BD5B6E62063B32A00438CF2 /* View */,
+				0BD5B6E42063B2B900438CF2 /* Model */,
+				0BD5B6E72063B35800438CF2 /* Supporting Files */,
 				0BCF6A8720600990009CCC60 /* Info.plist */,
 			);
 			path = mastermind;
+			sourceTree = "<group>";
+		};
+		0BD5B6E42063B2B900438CF2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0B51C0E62061376500B8DDCB /* Game.swift */,
+				0BD5B6D62062BFD100438CF2 /* Color.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0BD5B6E52063B2EE00438CF2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0BCF6A7B20600990009CCC60 /* AppDelegate.swift */,
+				0BCF6A7D20600990009CCC60 /* ViewController.swift */,
+				0B51C0E020611B9B00B8DDCB /* HomeController.swift */,
+				0B51C0E420612C7500B8DDCB /* GameController.swift */,
+				0B51C0E220612C0E00B8DDCB /* CreditsController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0BD5B6E62063B32A00438CF2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0BCF6A7F20600990009CCC60 /* Main.storyboard */,
+				0BCF6A8420600990009CCC60 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0BD5B6E72063B35800438CF2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0BCF6A8220600990009CCC60 /* Assets.xcassets */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		1F33123927B5C53FF04EB9FD /* Frameworks */ = {
