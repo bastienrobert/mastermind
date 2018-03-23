@@ -31,6 +31,7 @@ class GameController: ViewController, UITableViewDataSource, UITableViewDelegate
     }
     @IBAction func restartGame(_ sender: Any) {
         self.myGame = Game()
+        gameTable.reloadData()
     }
     @IBAction func validateCombination(_ sender: Any) {
         myGame.check()

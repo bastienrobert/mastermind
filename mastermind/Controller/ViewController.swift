@@ -36,6 +36,7 @@ class ViewController: UIViewController {
             button.backgroundColor = params["backgroundColor"] as? UIColor
             button.layer.borderColor = (params["borderColor"] as! CGColor)
         } else {
+            button.setTitle("", for: .normal)
             button.backgroundColor = UIColor(red:0.98, green:0.98, blue:0.98, alpha:1.0)
             button.layer.borderColor = UIColor(red:0.97, green:0.97, blue:0.97, alpha:1.0).cgColor
         }
