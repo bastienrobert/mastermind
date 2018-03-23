@@ -11,6 +11,7 @@ import UIKit
 
 class Game {
     
+    var scheduledTimer: Timer? = nil
     var timer: Int = 0
     var row: Int = 0
     var solution: [Int] = []
@@ -25,7 +26,12 @@ class Game {
     }
     
     func startTimer() {
-        Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.setTimer), userInfo: nil, repeats: true)
+        scheduledTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.setTimer), userInfo: nil, repeats: true)
+    }
+    
+    func stopTimer() {
+        scheduledTimer?.invalidate()
+        scheduledTimer = nil
     }
     
     @objc func setTimer() {
@@ -64,6 +70,7 @@ class Game {
         } else {
             self.engine()
             let isAllTrue = self.results[row].index(where: { $0 == false || $0 == nil }) == nil
+            self.endRow()
             isAllTrue == true ? self.youWin() : nil
         }
     }

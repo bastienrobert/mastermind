@@ -19,6 +19,20 @@ class GameController: ViewController, UITableViewDataSource, UITableViewDelegate
     @IBOutlet var fruitButtons: [UIButton]!
     @IBOutlet weak var validateButton: UIButton!
     
+    // Popup
+    @IBOutlet weak var popupContainer: UIView!
+    @IBOutlet weak var popupTitle: UILabel!
+    @IBOutlet weak var popupLabel: UILabel!
+    @IBOutlet weak var popupButton: UIButton!
+    @IBOutlet var popupResults: [UILabel]!
+    @IBAction func popupBtnPressed(_ sender: UIButton) {
+        customizePopup(visible: false, result: false)
+        self.myGame = Game()
+        gameTable.reloadData()
+    }
+    @IBOutlet weak var popupBackground: UIImageView!
+    
+    
     // Actions vars
     @IBAction func fruitBtnPressed(_ sender: UIButton) {
         myGame.cache.count == 0 ? myGame.cache.append([]) : nil
@@ -34,9 +48,7 @@ class GameController: ViewController, UITableViewDataSource, UITableViewDelegate
     }
     @IBAction func validateCombination(_ sender: Any) {
         myGame.check()
-        myGame.endRow()
         validateButton.isHidden = true
-        print(myGame.cache)
         gameTable.reloadData()
     }
     
@@ -50,13 +62,13 @@ class GameController: ViewController, UITableViewDataSource, UITableViewDelegate
             customizeControls(button: button, params: params)
         }
         customizeButton(button: validateButton)
+        customizePopup(visible: false, result: false)
         validateButton.isHidden = true
         
         gameTable.delegate = self
         gameTable.dataSource = self
         self.gameTable.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         
-        print(myGame.cache)
     }
     
     @objc func timer() {
@@ -77,18 +89,36 @@ class GameController: ViewController, UITableViewDataSource, UITableViewDelegate
         button.layer.borderWidth = 2
     }
     
-    @objc func endGame() {
-        let alert: UIAlertController
-        if myGame.end == true {
-            alert = UIAlertController(title: "You win", message: "Message", preferredStyle: UIAlertControllerStyle.alert)
-        } else {
-            alert = UIAlertController(title: "You loose", message: "Message", preferredStyle: UIAlertControllerStyle.alert)
-        }
-        alert.addAction(UIAlertAction(title: "Restart", style: UIAlertActionStyle.default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
+    func customizePopup(visible: Bool, result: Bool) {
+        popupContainer.layer.cornerRadius = 5
+        popupButton.clipsToBounds = true
+        popupButton.layer.cornerRadius = 5
+        popupButton.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
         
-        self.myGame = Game()
-        gameTable.reloadData()
+        popupContainer.isHidden = !visible
+        popupBackground.isHidden = !visible
+        popupTitle.isHidden = result
+        for label in popupResults {
+            label.isHidden = !result
+            customizeResult(label: label, id: myGame.solution[label.tag])
+        }
+
+    }
+    
+    @objc func endGame() {
+        myGame.stopTimer()
+        if myGame.end == true {
+            customizePopup(visible: true, result: false)
+            popupTitle.text = "🏆 YOU WIN! 🏆"
+            popupLabel.text = "\(myGame.row) rounds in \(myGame.getTimer()), you’re dope!"
+            popupButton.setTitle("Save my score", for: .normal)
+        } else if myGame.end == false {
+            customizePopup(visible: true, result: true)
+            popupLabel.text = "Oh no! So cloooose!\nNext time will be the one!"
+            popupButton.setTitle("Yep for sure! 💪", for: .normal)
+        } else {
+            customizePopup(visible: false, result: false)
+        }
     }
     
     //GAME TABLE VIEW

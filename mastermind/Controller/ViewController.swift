@@ -45,6 +45,16 @@ class ViewController: UIViewController {
         button.layer.borderWidth = 2
     }
     
+    func customizeResult(label: UILabel, id: Int?) {
+        let params = Color.Value(rawValue: id!)!.label()
+        label.text = params["icon"] as? String
+        label.backgroundColor = params["backgroundColor"] as? UIColor
+        label.layer.borderColor = (params["borderColor"] as! CGColor)
+        label.layer.cornerRadius = 25
+        label.layer.masksToBounds = true
+        label.layer.borderWidth = 2
+    }
+    
     func customizeSolution(label: UILabel, status: Bool?) {
         if (status == true) {
             label.backgroundColor = UIColor(red:0.95, green:0.98, blue:0.91, alpha:1.0)

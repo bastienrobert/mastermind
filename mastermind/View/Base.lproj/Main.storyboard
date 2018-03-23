@@ -11,6 +11,7 @@
     </dependencies>
     <customFonts key="customFonts">
         <array key="GillSans.ttc">
+            <string>GillSans</string>
             <string>GillSans-SemiBold</string>
         </array>
         <array key="HelveticaNeue.ttc">
@@ -323,6 +324,76 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" alpha="0.34999999999999998" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jLZ-9o-kAI">
+                                <rect key="frame" x="-6" y="-8" width="387" height="683"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yWS-2l-xDZ">
+                                <rect key="frame" x="53" y="258" width="268" height="138"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TITLE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bzk-bp-yRl">
+                                        <rect key="frame" x="69" y="12" width="130" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Bc-AW-pOl">
+                                        <rect key="frame" x="0.0" y="97" width="268" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="popupBtnPressed:" destination="u9b-Oz-eoB" eventType="touchUpInside" id="IWV-5x-lCN"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k49-y2-I8B">
+                                        <rect key="frame" x="37" y="41" width="195" height="42"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ak-Gk-b1S">
+                                        <rect key="frame" x="23" y="-29" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.97383340822240438" green="0.83662937913511692" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ls-G3-bGo">
+                                        <rect key="frame" x="81" y="-29" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.97383340819999997" green="0.83662937910000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2TK-uu-tK6">
+                                        <rect key="frame" x="139" y="-29" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.97383340819999997" green="0.83662937910000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6bX-bB-QIv">
+                                        <rect key="frame" x="197" y="-29" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.97383340819999997" green="0.83662937910000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <viewLayoutGuide key="safeArea" id="QSl-Sa-wH7"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Z0S-oK-X43"/>
@@ -331,6 +402,11 @@
                         <outlet property="gameTable" destination="K7K-NA-SOz" id="8BS-4N-gzh"/>
                         <outlet property="labelCounter" destination="Emg-59-F42" id="wtK-VG-b8s"/>
                         <outlet property="newButton" destination="yuV-DQ-wrA" id="jpQ-aE-Ku9"/>
+                        <outlet property="popupBackground" destination="jLZ-9o-kAI" id="Ha2-Ij-nZb"/>
+                        <outlet property="popupButton" destination="5Bc-AW-pOl" id="RFR-0p-hwV"/>
+                        <outlet property="popupContainer" destination="yWS-2l-xDZ" id="MAC-Sw-Jup"/>
+                        <outlet property="popupLabel" destination="k49-y2-I8B" id="LID-Df-R5L"/>
+                        <outlet property="popupTitle" destination="bzk-bp-yRl" id="goz-zm-a1v"/>
                         <outlet property="validateButton" destination="l56-7P-a5c" id="bCi-Tv-Rqb"/>
                         <outletCollection property="fruitButtons" destination="kQh-hr-r6s" collectionClass="NSMutableArray" id="c85-fQ-cqL"/>
                         <outletCollection property="fruitButtons" destination="QBU-8U-jLb" collectionClass="NSMutableArray" id="r8x-S9-0ET"/>
@@ -338,6 +414,11 @@
                         <outletCollection property="fruitButtons" destination="Rw8-le-Hiq" collectionClass="NSMutableArray" id="HUD-ue-kQh"/>
                         <outletCollection property="fruitButtons" destination="5Cl-Sk-0se" collectionClass="NSMutableArray" id="a91-gk-cqN"/>
                         <outletCollection property="fruitButtons" destination="CIp-zU-jR8" collectionClass="NSMutableArray" id="u6N-K9-Uo1"/>
+                        <outletCollection property="popupResults" destination="1Ak-Gk-b1S" collectionClass="NSMutableArray" id="k1U-gv-y2a"/>
+                        <outletCollection property="popupResults" destination="7Ls-G3-bGo" collectionClass="NSMutableArray" id="leW-5O-8cM"/>
+                        <outletCollection property="popupResults" destination="7Ls-G3-bGo" collectionClass="NSMutableArray" id="CM1-2J-n3F"/>
+                        <outletCollection property="popupResults" destination="2TK-uu-tK6" collectionClass="NSMutableArray" id="gTJ-mp-58e"/>
+                        <outletCollection property="popupResults" destination="6bX-bB-QIv" collectionClass="NSMutableArray" id="P3s-mm-uux"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lTv-qA-VN1" userLabel="First Responder" sceneMemberID="firstResponder"/>
