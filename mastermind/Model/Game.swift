@@ -59,7 +59,7 @@ class Game {
     }
     
     func check() {
-        if (self.row >= 9) {
+        if (self.row >= 8) {
             self.endGame()
         } else {
             self.engine()
