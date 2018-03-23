@@ -20,20 +20,24 @@ class GameController: ViewController, UITableViewDataSource, UITableViewDelegate
     @IBOutlet weak var validateButton: UIButton!
     
     // Actions vars
-    
     @IBAction func fruitBtnPressed(_ sender: UIButton) {
-        myGame.cache.count <= 4 ? myGame.cache.append(sender.tag) : nil
-        if (myGame.cache.count >= 4) {
+        myGame.cache.count == 0 ? myGame.cache.append([]) : nil
+        myGame.cache[myGame.row].append(sender.tag)
+        if (myGame.cache[myGame.row].count % 4 == 0) {
             validateButton.isHidden = false
         }
+        myGame.cache[myGame.row].count % 4 == 0 ? myGame.cache.append([]) : nil
+        gameTable.reloadData()
     }
     @IBAction func restartGame(_ sender: Any) {
         self.myGame = Game()
     }
     @IBAction func validateCombination(_ sender: Any) {
-        myGame.check(entry: myGame.cache)
+        myGame.check()
         myGame.endRow()
         validateButton.isHidden = true
+        print(myGame.cache)
+        gameTable.reloadData()
     }
     
     override func viewDidLoad() {
@@ -50,6 +54,8 @@ class GameController: ViewController, UITableViewDataSource, UITableViewDelegate
         gameTable.delegate = self
         gameTable.dataSource = self
         self.gameTable.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        
+        print(myGame.cache)
     }
     
     @objc func timer() {
@@ -91,7 +97,24 @@ class GameController: ViewController, UITableViewDataSource, UITableViewDelegate
             fatalError("can't cast cell")
         }
         
-        //cell.scoreId.text = scoreArray[indexPath.row]["id"]
+        let row = indexPath.row
+        
+        cell.gameId.text = String(indexPath.row + 1)
+        for button in cell.gameButtons {
+            if !myGame.cache.isEmpty, myGame.cache.count > row, !myGame.cache[row].isEmpty, myGame.cache[row].count > button.tag {
+                customizeFruit(button: button, id: myGame.cache[row][button.tag])
+            } else {
+                customizeFruit(button: button, id: nil)
+            }
+        }
+        
+        for label in cell.gameSolutions {
+            if !myGame.results.isEmpty, myGame.results.count > row {
+                customizeSolution(label: label, status: myGame.results[row][label.tag])
+            } else {
+                customizeSolution(label: label, status: nil)
+            }
+        }
         
         return cell
     }

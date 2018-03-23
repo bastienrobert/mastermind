@@ -10,6 +10,13 @@ import UIKit
 
 class GameTableViewCell: UITableViewCell {
 
+    @IBOutlet var gameSolutions: [UILabel]!
+    @IBOutlet var gameButtons: [UIButton]!
+    @IBOutlet weak var gameId: UILabel!
+    
+    @IBAction func gameBtnPressed(_ sender: UIButton) {
+        print(sender.tag)
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

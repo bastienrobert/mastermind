@@ -55,7 +55,7 @@ class ViewController: UIViewController {
             label.backgroundColor = UIColor(red:0.98, green:0.98, blue:0.98, alpha:1.0)
             label.layer.borderColor = UIColor(red:0.97, green:0.97, blue:0.97, alpha:1.0).cgColor
         }
-        label.layer.cornerRadius = 10
+        label.layer.cornerRadius = 7
         label.layer.masksToBounds = true
         label.layer.borderWidth = 2
     }

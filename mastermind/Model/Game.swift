@@ -12,9 +12,10 @@ import UIKit
 class Game {
     
     var timer: Int = 0
-    var rows: Int = 0
-    var solution: Array<Int> = []
-    var cache: Array<Int> = []
+    var row: Int = 0
+    var solution: [Int] = []
+    var cache: [[Int]] = []
+    var results: [[Bool?]] = []
     
     init() {
         self.startTimer()
@@ -56,51 +57,56 @@ class Game {
         return resolution
     }
     
-    func check(entry: Array<Int>) {
-        if (self.solution == entry) {
-            print("GAGNÉ")
-        } else if (self.rows >= 10) {
+    func check() {
+        if (self.row >= 9) {
             self.endGame()
         } else {
-            let checker = self.engine(entry: entry)
-            print(checker)
+            self.engine()
+            let isAllTrue = self.results[row].index(where: { $0 == false || $0 == nil }) == nil
+            isAllTrue == true ? self.youWin() : nil
         }
     }
     
-    func engine(entry: Array<Int>) -> [String: Int] {
-        var ok = 0
-        var nok = 0
-        var entry = entry as Array<Int?>
-        var solution = self.solution as Array<Int?>
+    func engine() {
+        var result: [Bool?] = []
+        var entry = self.cache[self.row]
+        var solution = self.solution as Array<Int>
         
         for i in 0..<solution.count where solution[i] == entry[i] {
-            ok += 1
-            solution[i] = nil
-            entry[i] = nil
+            result.append(true)
+            solution[i] = -1
+            entry[i] = -1
         }
         
         for i in 0..<solution.count {
-            for j in 0..<entry.count where solution[i] == entry[j] && solution[i] != nil {
-                nok += 1
-                solution[i] = nil
-                entry[j] = nil
+            for j in 0..<entry.count where solution[i] == entry[j] && solution[i] != -1 {
+                result.append(false)
+                solution[i] = -1
+                entry[j] = -1
             }
         }
         
-        return ["ok": ok, "nok": nok]
+        for _ in result.count..<4 {
+            result.append(nil)
+        }
+        
+        self.results.append(result)
     }
     
     func removeFromCache(id: Int) {
-        return self.cache.removeSubrange(id..<self.cache.count)
+        return self.cache[self.row].removeSubrange(id..<self.cache.count)
     }
     
     func endRow() {
-        self.cache = []
-        self.rows += 1
+        self.row += 1
     }
     
     func endGame() {
         print("PERDU")
+    }
+    
+    func youWin() {
+        print("GAGNÉ")
     }
     
 }
