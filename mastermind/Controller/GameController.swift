@@ -30,8 +30,7 @@ class GameController: ViewController, UITableViewDataSource, UITableViewDelegate
         gameTable.reloadData()
     }
     @IBAction func restartGame(_ sender: Any) {
-        self.myGame = Game()
-        gameTable.reloadData()
+        self.myGame.endGame()
     }
     @IBAction func validateCombination(_ sender: Any) {
         myGame.check()
@@ -44,6 +43,7 @@ class GameController: ViewController, UITableViewDataSource, UITableViewDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         NotificationCenter.default.addObserver(self, selector: #selector(timer), name: Notification.Name(rawValue: "timerUpdated"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(endGame), name: Notification.Name(rawValue: "endGame"), object: nil)
         
         for button in fruitButtons {
             let params = Color.Value(rawValue: button.tag)!.label()
@@ -75,6 +75,20 @@ class GameController: ViewController, UITableViewDataSource, UITableViewDelegate
         button.layer.cornerRadius = 25
         button.layer.masksToBounds = true
         button.layer.borderWidth = 2
+    }
+    
+    @objc func endGame() {
+        let alert: UIAlertController
+        if myGame.end == true {
+            alert = UIAlertController(title: "You win", message: "Message", preferredStyle: UIAlertControllerStyle.alert)
+        } else {
+            alert = UIAlertController(title: "You loose", message: "Message", preferredStyle: UIAlertControllerStyle.alert)
+        }
+        alert.addAction(UIAlertAction(title: "Restart", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+        
+        self.myGame = Game()
+        gameTable.reloadData()
     }
     
     //GAME TABLE VIEW

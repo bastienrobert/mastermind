@@ -16,6 +16,7 @@ class Game {
     var solution: [Int] = []
     var cache: [[Int]] = []
     var results: [[Bool?]] = []
+    var end: Bool? = nil
     
     init() {
         self.startTimer()
@@ -102,11 +103,15 @@ class Game {
     }
     
     func endGame() {
-        print("PERDU")
+        self.end = false
+        let notification = Notification(name: Notification.Name("endGame"))
+        NotificationCenter.default.post(notification)
     }
     
     func youWin() {
-        print("GAGNÉ")
+        self.end = true
+        let notification = Notification(name: Notification.Name("endGame"))
+        NotificationCenter.default.post(notification)
     }
     
 }
